@@ -1,0 +1,4 @@
+DICODING_EMAIL=dicoding@example.com
+DICODING_PASSWORD=123456
+
+Link Github : https://kinkareem.github.io/Submisson_Belajar-Web-Interaktif_Kin-Kareem-Raya-Benami-Wijaya/#/
