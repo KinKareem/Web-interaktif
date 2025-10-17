@@ -23,7 +23,9 @@ export default class MapView {
             </div>
         `;
 
-        await this.initMap(container);
+        // Tunggu DOM ter-attach baru init map
+        setTimeout(() => this.initMap(container), 0);
+
         return container;
     }
 
@@ -57,6 +59,12 @@ export default class MapView {
 
         // Layer control
         L.control.layers({ "Street Map": tile1, "Topo Map": tile2 }).addTo(this.map);
+
+        // PENTING: Panggil invalidateSize setelah map diinisialisasi
+        // dan pastikan container sudah memiliki ukuran yang benar
+        requestAnimationFrame(() => {
+            this.map.invalidateSize();
+        });
 
         // Render daftar story dengan tombol favorite
         await this.renderStoryList(listEl);

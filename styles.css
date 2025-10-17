@@ -120,13 +120,13 @@ body {
 .map-wrapper {
     display: flex;
     gap: 1rem;
+    height: calc(100vh - 200px);
 }
 
 #map {
-    flex: 2;
-    height: 500px;
-    border-radius: 1rem;
-    overflow: hidden;
+    flex: 1;
+    min-height: 400px;
+    height: 100%;
 }
 
 .story-list {
